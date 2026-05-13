@@ -163,7 +163,9 @@ function MainGrid() {
   return (
     <div className="relative max-w-[1400px] mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-12 gap-x-12 gap-y-12">
       <div className="md:col-span-4">
-        <Logo className="text-lg" />
+        <Link href="/" className="inline-block">
+          <Logo className="text-lg" />
+        </Link>
         <p className="mt-6 max-w-sm text-sm text-muted leading-relaxed">
           Where cutting-edge AI meets timeless storytelling meets
           scroll-stopping drama marketing. Three verticals. One vision.

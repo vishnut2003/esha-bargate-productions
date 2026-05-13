@@ -291,13 +291,17 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
 
       <div className="max-w-[1400px] mx-auto px-6">
         <div className="h-16 flex items-center justify-between">
-          <div className="flex items-center gap-3">
+          <Link
+            href="/"
+            onClick={onClose}
+            className="flex items-center gap-3"
+          >
             <span className="relative inline-flex h-2 w-2">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand opacity-75" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-brand" />
             </span>
             <Logo className="text-sm" />
-          </div>
+          </Link>
           <button
             type="button"
             onClick={onClose}
