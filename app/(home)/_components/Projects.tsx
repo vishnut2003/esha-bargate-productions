@@ -20,7 +20,7 @@ const projects: Project[] = [
       "Released on Apple TV & Google TV in India. A cross-cultural narrative bridging worlds through compelling storytelling.",
     badges: ["Apple TV", "Google TV", "India Release"],
     status: "STREAMING NOW",
-    poster: "/images/home/projects/sarhadain.jpg",
+    poster: "/images/home/projects/sarhadein-poster.jpg",
     href: "#streaming",
   },
   {
@@ -31,7 +31,7 @@ const projects: Project[] = [
     badges: ["Short Film", "Drama", "IMDb: tt38821662"],
     status: "COMPLETED",
     meta: "Released April 14, 2025",
-    poster: "/images/home/projects/mediator.jpg",
+    poster: "/images/home/projects/mediator-poster.jpg",
     href: "https://www.imdb.com/title/tt38821662/",
   },
 ];

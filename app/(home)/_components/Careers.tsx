@@ -127,7 +127,7 @@ export function Careers() {
             talent.
           </p>
           <Link
-            href="mailto:careers@eshabargateproductions.com?subject=Reel%20%26%20Resume"
+            href="mailto:eshabargateproductions@gmail.com?subject=Reel%20%26%20Resume"
             className="group relative inline-flex items-center gap-3 bg-brand text-foreground font-heading text-[11px] tracking-[0.2em] px-7 py-4 transition overflow-hidden"
           >
             <span className="absolute inset-0 bg-brand-hover translate-x-[-101%] group-hover:translate-x-0 transition-transform duration-500" />
@@ -137,7 +137,7 @@ export function Careers() {
             </span>
           </Link>
           <p className="mt-5 font-heading text-[10px] tracking-[0.25em] text-subtle">
-            careers@eshabargateproductions.com
+            eshabargateproductions@gmail.com
           </p>
         </div>
       </div>

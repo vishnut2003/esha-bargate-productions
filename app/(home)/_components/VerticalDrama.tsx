@@ -108,23 +108,20 @@ export function VerticalDrama() {
           <p className="font-heading text-[10px] tracking-[0.3em] text-subtle mb-6">
             FORMATS WE BUILD FOR
           </p>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {platforms.map((p) => (
               <div
                 key={p}
-                className="group relative border border-border bg-surface/40 backdrop-blur-sm aspect-[9/16] flex items-center justify-center overflow-hidden hover:border-brand transition"
+                className="group relative border border-border bg-surface/40 backdrop-blur-sm aspect-video flex items-center justify-center gap-4 px-6 overflow-hidden hover:border-brand transition"
               >
                 <span className="pointer-events-none absolute -top-px -left-px w-3 h-3 border-t border-l border-brand opacity-0 group-hover:opacity-100 transition" />
                 <span className="pointer-events-none absolute -bottom-px -right-px w-3 h-3 border-b border-r border-brand opacity-0 group-hover:opacity-100 transition" />
 
-                <span className="absolute top-4 left-1/2 -translate-x-1/2 inline-flex h-3 w-3 rounded-full bg-brand">
+                <span className="relative inline-flex h-3 w-3 shrink-0 rounded-full bg-brand">
                   <span className="absolute inset-0 inline-flex h-full w-full animate-ping rounded-full bg-brand opacity-75" />
                 </span>
 
-                <span
-                  className="font-heading text-[10px] tracking-[0.3em] text-subtle group-hover:text-brand transition"
-                  style={{ writingMode: "vertical-rl" }}
-                >
+                <span className="font-heading text-sm sm:text-base tracking-[0.3em] text-subtle group-hover:text-brand transition">
                   {p}
                 </span>
               </div>

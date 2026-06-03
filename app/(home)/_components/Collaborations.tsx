@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 type Partner = {
@@ -9,7 +8,6 @@ type Partner = {
   tags: string[];
   highlightLabel: string;
   highlightValue: string;
-  logo: string;
   href: string;
   glow: string;
 };
@@ -22,9 +20,8 @@ const partners: Partner[] = [
     description:
       "A Los Angeles-based production powerhouse specializing in script development, script supervision, and production support from script to screen.",
     tags: ["Script Development", "Production Support", "Film"],
-    highlightLabel: "UPCOMING",
-    highlightValue: "The Sound of Change",
-    logo: "/images/home/partners/partner-1.png",
+    highlightLabel: "UPCOMING PROJECTS",
+    highlightValue: " Black Morning and Stolen Innocence",
     href: "#",
     glow: "from-blue-500/20 to-blue-900/20",
   },
@@ -37,20 +34,18 @@ const partners: Partner[] = [
     tags: ["Feature Films", "Video Production", "Post Production"],
     highlightLabel: "JOINT PROJECT",
     highlightValue: "Sarhadain",
-    logo: "/images/home/partners/partner-2.png",
     href: "#",
     glow: "from-amber-500/20 to-amber-900/20",
   },
   {
     num: "03",
-    name: "The Mediator Co-Production",
+    name: "The Mediator",
     location: "INTERNATIONAL",
     description:
-      "A short drama collaboration directed by Mugisha Feruzi & Kathy-Ann Hart. EBP partnered with the directors to bring this Harvard-trained mediator's story to screen.",
+      "Esha Bargate Productions LLC partnered on the marketing and distribution of The Mediator, expanding audience reach and industry visibility.",
     tags: ["Short Film", "Drama", "Direction"],
     highlightLabel: "COMPLETED",
-    highlightValue: "Released April 14, 2025",
-    logo: "/images/home/partners/partner-3.png",
+    highlightValue: "",
     href: "https://www.imdb.com/title/tt38821662/",
     glow: "from-purple-500/20 to-purple-900/20",
   },
@@ -116,7 +111,6 @@ function PartnerCard({
   tags,
   highlightLabel,
   highlightValue,
-  logo,
   href,
   glow,
 }: Partner) {
@@ -130,15 +124,6 @@ function PartnerCard({
       <div
         className={`md:col-span-3 relative aspect-[16/10] md:aspect-auto md:min-h-[240px] bg-gradient-to-br ${glow} flex flex-col items-center justify-center p-6 border-b md:border-b-0 md:border-r border-border`}
       >
-        <div className="relative w-20 h-20 mb-4 flex items-center justify-center">
-          <Image
-            src={logo}
-            alt={name}
-            width={80}
-            height={80}
-            className="object-contain w-full h-full opacity-80 group-hover:opacity-100 transition"
-          />
-        </div>
         <p className="font-heading font-bold text-sm text-foreground text-center leading-tight">
           {name}
         </p>
@@ -180,9 +165,11 @@ function PartnerCard({
             <p className="font-heading text-[9px] tracking-[0.3em] text-subtle">
               {highlightLabel}
             </p>
-            <p className="mt-1 font-heading italic text-brand text-base">
-              {highlightValue}
-            </p>
+            {highlightValue && (
+              <p className="mt-1 font-heading italic text-brand text-base">
+                {highlightValue}
+              </p>
+            )}
           </div>
 
           <Link

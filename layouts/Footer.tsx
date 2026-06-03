@@ -249,13 +249,15 @@ function MainGrid() {
         <ul className="space-y-5">
           <li>
             <p className="font-heading text-[9px] tracking-[0.25em] text-subtle mb-1">
-              PHONE
+              WHATSAPP
             </p>
             <a
-              href="tel:+15109532966"
+              href="https://wa.me/15109532966"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-sm text-foreground hover:text-brand transition"
             >
-              510-953-2966
+              +1 510-953-2966
             </a>
           </li>
           <li>

@@ -2,9 +2,7 @@ import { ContactForm } from "@/components/ContactForm";
 
 const emails = [
   { label: "GENERAL", value: "contact@eshabargateproductions.com" },
-  { label: "INVESTORS", value: "investors@eshabargateproductions.com" },
-  { label: "DISTRIBUTION", value: "distribution@eshabargateproductions.com" },
-  { label: "CAREERS", value: "careers@eshabargateproductions.com" },
+  { label: "CAREERS", value: "eshabargateproductions@gmail.com" },
 ];
 
 const social = [
@@ -97,16 +95,18 @@ export function Contact() {
 
             <div>
               <div className="flex items-center gap-2 mb-3 text-subtle">
-                <PhoneIcon />
+                <WhatsAppIcon />
                 <p className="font-heading text-[10px] tracking-[0.3em]">
-                  PHONE
+                  GLOBAL WHATSAPP
                 </p>
               </div>
               <a
-                href="tel:+15109532966"
+                href="https://wa.me/15109532966"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="font-heading font-bold text-2xl sm:text-3xl text-foreground hover:text-brand transition tracking-tight"
               >
-                510-953-2966
+                +1 510-953-2966
               </a>
             </div>
 
@@ -117,6 +117,18 @@ export function Contact() {
                   EMAIL
                 </p>
               </div>
+              <p className="text-sm text-muted leading-relaxed mb-4">
+                For distribution, investor relations, entertainment marketing,
+                partnerships, media requests, or other inquiries, please contact
+                us at{" "}
+                <a
+                  href="mailto:contact@eshabargateproductions.com"
+                  className="text-foreground hover:text-brand transition"
+                >
+                  contact@eshabargateproductions.com
+                </a>
+                .
+              </p>
               <div>
                 {emails.map((e) => (
                   <a
@@ -234,7 +246,7 @@ export function Contact() {
   );
 }
 
-function PhoneIcon() {
+function WhatsAppIcon() {
   return (
     <svg
       width="14"
@@ -246,7 +258,8 @@ function PhoneIcon() {
       strokeLinecap="round"
       strokeLinejoin="round"
     >
-      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z" />
+      <path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21" />
+      <path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1" />
     </svg>
   );
 }

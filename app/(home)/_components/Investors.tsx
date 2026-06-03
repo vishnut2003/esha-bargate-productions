@@ -123,7 +123,7 @@ export function Investors() {
             </p>
 
             <Link
-              href="mailto:investors@eshabargateproductions.com"
+              href="mailto:contact@eshabargateproductions.com?subject=Investor%20Relations"
               className="group relative inline-flex items-center gap-3 mt-8 bg-brand text-foreground font-heading text-[11px] tracking-[0.2em] px-7 py-4 transition overflow-hidden"
             >
               <span className="absolute inset-0 bg-brand-hover translate-x-[-101%] group-hover:translate-x-0 transition-transform duration-500" />
@@ -134,7 +134,7 @@ export function Investors() {
             </Link>
 
             <p className="mt-6 font-heading text-[10px] tracking-[0.25em] text-subtle">
-              investors@eshabargateproductions.com
+              contact@eshabargateproductions.com
             </p>
           </div>
         </div>

@@ -163,7 +163,7 @@ export function Streaming() {
 
           <div className="flex flex-col sm:flex-row gap-3">
             <Link
-              href="mailto:distribution@eshabargateproductions.com?subject=Request%20Screening"
+              href="mailto:contact@eshabargateproductions.com?subject=Request%20Screening"
               className="group relative inline-flex items-center gap-3 bg-brand text-foreground font-heading text-[11px] tracking-[0.2em] px-6 py-3.5 transition overflow-hidden"
             >
               <span className="absolute inset-0 bg-brand-hover translate-x-[-101%] group-hover:translate-x-0 transition-transform duration-500" />
@@ -173,7 +173,7 @@ export function Streaming() {
               </span>
             </Link>
             <Link
-              href="mailto:distribution@eshabargateproductions.com?subject=Download%20Catalog"
+              href="mailto:contact@eshabargateproductions.com?subject=Download%20Catalog"
               className="group inline-flex items-center gap-3 border border-border-strong hover:border-foreground text-foreground font-heading text-[11px] tracking-[0.2em] px-6 py-3.5 transition"
             >
               DOWNLOAD CATALOG
@@ -184,7 +184,7 @@ export function Streaming() {
           </div>
 
           <p className="mt-6 font-heading text-[10px] tracking-[0.25em] text-subtle">
-            distribution@eshabargateproductions.com
+            contact@eshabargateproductions.com
           </p>
         </div>
       </div>

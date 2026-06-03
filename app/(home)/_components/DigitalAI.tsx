@@ -33,14 +33,14 @@ const services: Service[] = [
     glyph: "⚡",
     title: "Digital Distribution",
     description: "Smart distribution powered by AI across global platforms.",
-    image: "/images/home/digital-ai/feature-7.jpg",
+    image: "/images/home/digital-ai/distribution.jpg",
   },
   {
     glyph: "🎬",
     title: "AI Post-Production",
     description:
       "Neural editing, AI color grading, automated VFX, intelligent workflows.",
-    image: "/images/home/digital-ai/feature-6.jpg",
+    image: "/images/home/digital-ai/post-production.jpg",
   },
 ];
 
