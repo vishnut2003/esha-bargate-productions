@@ -13,6 +13,7 @@ const navigate = [
   { label: "Collaborations", href: "#collaborations" },
   { label: "Investors", href: "#investors" },
   { label: "Streaming", href: "#streaming" },
+  { label: "Pricing", href: "#pricing" },
   { label: "Careers", href: "#careers" },
   { label: "Press", href: "#press" },
   { label: "Contact", href: "#contact" },

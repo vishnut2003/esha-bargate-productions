@@ -34,6 +34,7 @@ const primaryNav = [
   { label: "COLLABORATIONS", href: "#collaborations" },
   { label: "INVESTORS", href: "#investors" },
   { label: "STREAMING", href: "#streaming" },
+  { label: "PRICING", href: "#pricing" },
   { label: "CAREERS", href: "#careers" },
 ];
 

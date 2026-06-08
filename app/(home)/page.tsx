@@ -11,6 +11,7 @@ import { Streaming } from "./_components/Streaming";
 import { Press } from "./_components/Press";
 import { Careers } from "./_components/Careers";
 import { Community } from "./_components/Community";
+import { Pricing } from "./_components/Pricing";
 import { Contact } from "./_components/Contact";
 
 export default function Home() {
@@ -29,6 +30,7 @@ export default function Home() {
       <Press />
       <Careers />
       <Community />
+      <Pricing />
       <Contact />
     </>
   );
