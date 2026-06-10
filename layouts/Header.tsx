@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Logo } from "@/components/Logo";
 
 const verticals = [
@@ -156,16 +157,23 @@ function LogoCluster({ shrunk }: { shrunk: boolean }) {
     <Link href="/" className="group flex items-center gap-3 shrink-0">
       <span
         className={`relative flex items-center justify-center border border-border-strong group-hover:border-brand transition-all duration-300 ${
-          shrunk ? "w-7 h-7" : "w-9 h-9"
+          shrunk ? "w-10 h-10" : "w-12 h-12"
         }`}
       >
         <span className="pointer-events-none absolute -top-px -left-px w-1.5 h-1.5 border-t border-l border-brand opacity-0 group-hover:opacity-100 transition" />
         <span className="pointer-events-none absolute -top-px -right-px w-1.5 h-1.5 border-t border-r border-brand opacity-0 group-hover:opacity-100 transition" />
         <span className="pointer-events-none absolute -bottom-px -left-px w-1.5 h-1.5 border-b border-l border-brand opacity-0 group-hover:opacity-100 transition" />
         <span className="pointer-events-none absolute -bottom-px -right-px w-1.5 h-1.5 border-b border-r border-brand opacity-0 group-hover:opacity-100 transition" />
-        <span className="font-heading font-bold text-[10px] tracking-tighter text-foreground">
-          EB
-        </span>
+        <Image
+          src="/images/assets/erp-logo-transparent.png"
+          alt="Esha Bargate Productions"
+          width={534}
+          height={772}
+          priority
+          className={`w-auto object-contain transition-all duration-300 ${
+            shrunk ? "h-8" : "h-9"
+          }`}
+        />
       </span>
       <div className="flex flex-col leading-none">
         <Logo className="text-sm whitespace-nowrap" />
