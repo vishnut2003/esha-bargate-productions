@@ -227,7 +227,7 @@ export function Pricing() {
       </div>
 
       <div className="relative max-w-[1400px] mx-auto px-6">
-        {/* ---------- Retainers ---------- */}
+        {/* ---------- Section intro ---------- */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-3 mb-6">
             <span className="block w-10 h-px bg-brand" />
@@ -253,15 +253,24 @@ export function Pricing() {
           </p>
         </div>
 
-        <p className="flex items-center justify-center gap-3 font-heading text-[10px] tracking-[0.3em] text-subtle mb-10">
-          <span className="block w-6 h-px bg-border-strong" />
-          BRAND INTEGRATION &amp; PLACEMENT
-          <span className="block w-6 h-px bg-border-strong" />
-        </p>
+        {/* ---------- Productions & Consulting ---------- */}
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center gap-3 mb-6">
+            <span className="block w-10 h-px bg-brand" />
+            <span className="font-heading text-[11px] tracking-[0.3em] text-brand">
+              ADDITIONAL SERVICES
+            </span>
+            <span className="block w-10 h-px bg-brand" />
+          </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
-          {retainers.map((p) => (
-            <PlanCardView key={p.name} {...p} />
+          <h2 className="font-heading font-bold tracking-tight leading-[1] text-4xl sm:text-5xl md:text-6xl text-foreground">
+            Productions &amp; Consulting
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-1 gap-6">
+          {consultingServices.map((s) => (
+            <ServiceRowView key={s.name} {...s} />
           ))}
         </div>
 
@@ -296,24 +305,24 @@ export function Pricing() {
           ))}
         </div>
 
-        {/* ---------- Productions & Consulting ---------- */}
+        {/* ---------- Retainers ---------- */}
         <div className="text-center mt-28 mb-12">
           <div className="inline-flex items-center gap-3 mb-6">
             <span className="block w-10 h-px bg-brand" />
             <span className="font-heading text-[11px] tracking-[0.3em] text-brand">
-              ADDITIONAL SERVICES
+              BRAND INTEGRATION &amp; PLACEMENT
             </span>
             <span className="block w-10 h-px bg-brand" />
           </div>
 
           <h2 className="font-heading font-bold tracking-tight leading-[1] text-4xl sm:text-5xl md:text-6xl text-foreground">
-            Productions &amp; Consulting
+            Monthly Retainers
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 gap-6">
-          {consultingServices.map((s) => (
-            <ServiceRowView key={s.name} {...s} />
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+          {retainers.map((p) => (
+            <PlanCardView key={p.name} {...p} />
           ))}
         </div>
 
