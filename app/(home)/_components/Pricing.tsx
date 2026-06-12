@@ -294,7 +294,7 @@ export function Pricing() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
           {partnerships.map((p) => (
-            <PlanCardView key={p.name} {...p} />
+            <PartnershipCardView key={p.name} {...p} />
           ))}
         </div>
 
@@ -431,6 +431,80 @@ function PlanCardView({
   );
 }
 
+function PartnershipCardView({
+  tier,
+  name,
+  description,
+  popular,
+}: PlanCard) {
+  return (
+    <div
+      className={`group relative backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 p-7 sm:p-8 flex flex-col ${
+        popular
+          ? "mt-4 bg-surface/70 border border-brand"
+          : "overflow-hidden bg-surface/40 border border-border hover:border-brand"
+      }`}
+    >
+      {popular && (
+        <span className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-brand text-foreground font-heading text-[9px] tracking-[0.3em] px-4 py-1.5">
+          MOST POPULAR
+        </span>
+      )}
+
+      <span className="pointer-events-none absolute -top-px -left-px w-3 h-3 border-t border-l border-brand opacity-0 group-hover:opacity-100 transition" />
+      <span className="pointer-events-none absolute -top-px -right-px w-3 h-3 border-t border-r border-brand opacity-0 group-hover:opacity-100 transition" />
+      <span className="pointer-events-none absolute -bottom-px -left-px w-3 h-3 border-b border-l border-brand opacity-0 group-hover:opacity-100 transition" />
+      <span className="pointer-events-none absolute -bottom-px -right-px w-3 h-3 border-b border-r border-brand opacity-0 group-hover:opacity-100 transition" />
+
+      <div className="relative flex flex-col flex-1">
+        <p
+          className={`font-heading text-[10px] tracking-[0.3em] mb-4 ${
+            popular ? "text-brand" : "text-subtle"
+          }`}
+        >
+          {tier}
+        </p>
+
+        <h3 className="font-heading font-bold tracking-tight text-3xl sm:text-[2.1rem] text-foreground mb-5">
+          {name}
+        </h3>
+
+        <p className="text-sm text-muted leading-relaxed mb-6">{description}</p>
+
+        <div className="flex-1" />
+
+        <div className="h-px bg-border mb-6" />
+
+        <Link
+          href="#contact"
+          className={`group/btn relative inline-flex items-center justify-center gap-2 font-heading text-[11px] tracking-[0.2em] px-5 py-4 transition overflow-hidden ${
+            popular
+              ? "bg-brand text-foreground"
+              : "border border-border-strong hover:border-foreground text-foreground"
+          }`}
+        >
+          {popular && (
+            <span className="absolute inset-0 bg-brand-hover translate-x-[-101%] group-hover/btn:translate-x-0 transition-transform duration-500" />
+          )}
+          <span className="relative">BOOK A CALL</span>
+          <span className="relative transition-transform group-hover/btn:translate-x-1">
+            <Arrow />
+          </span>
+        </Link>
+
+        <a
+          href="mailto:contact@eshabargateproductions.com"
+          className="mt-4 block text-center font-heading text-[10px] tracking-[0.2em] text-subtle hover:text-foreground transition break-all"
+        >
+          contact@eshabargateproductions.com
+        </a>
+      </div>
+
+      <span className="pointer-events-none absolute bottom-0 left-0 right-0 h-[2px] origin-center scale-x-0 bg-gradient-to-r from-transparent via-brand to-transparent transition-transform duration-700 group-hover:scale-x-100" />
+    </div>
+  );
+}
+
 function ServiceRowView({
   kind,
   name,
@@ -462,9 +536,9 @@ function ServiceRowView({
       </div>
 
       <div className="lg:col-span-3 lg:text-center">
-        <p className="font-heading font-bold tracking-tighter leading-none text-foreground">
-          <span className="text-3xl sm:text-4xl">{price}</span>{" "}
-          <span className="text-sm font-normal tracking-normal text-muted">
+        <p className="font-heading font-bold tracking-tighter leading-tight text-foreground">
+          <span className="block text-3xl sm:text-4xl text-balance">{price}</span>
+          <span className="mt-1 block text-sm font-normal tracking-normal text-muted">
             {unit}
           </span>
         </p>

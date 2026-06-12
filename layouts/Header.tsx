@@ -84,16 +84,6 @@ export function Header() {
 
             <div className="flex items-center gap-2">
               <Link
-                href="#reel"
-                className="group hidden md:inline-flex items-center gap-2 border border-border-strong hover:border-foreground text-muted hover:text-foreground font-heading text-[10px] tracking-[0.25em] px-4 py-2.5 transition"
-              >
-                <span className="text-brand transition-transform group-hover:scale-110">
-                  <PlayIcon />
-                </span>
-                REEL
-              </Link>
-
-              <Link
                 href="#contact"
                 className="group relative hidden md:inline-flex items-center gap-2 bg-brand text-foreground font-heading text-[10px] tracking-[0.25em] px-5 py-2.5 transition overflow-hidden"
               >
@@ -376,16 +366,6 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
               GET IN TOUCH
               <ArrowRight />
             </Link>
-            <Link
-              href="#reel"
-              onClick={onClose}
-              className="inline-flex items-center justify-center gap-2 border border-border-strong hover:border-foreground text-foreground font-heading text-[11px] tracking-[0.25em] px-7 py-4 transition"
-            >
-              <span className="text-brand">
-                <PlayIcon />
-              </span>
-              WATCH REEL
-            </Link>
           </div>
         </div>
       </div>
@@ -405,14 +385,6 @@ function ArrowRight() {
         strokeLinecap="round"
         strokeLinejoin="round"
       />
-    </svg>
-  );
-}
-
-function PlayIcon() {
-  return (
-    <svg width="10" height="10" viewBox="0 0 10 10" fill="currentColor">
-      <path d="M2 1.2v7.6L8.5 5 2 1.2Z" />
     </svg>
   );
 }
