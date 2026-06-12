@@ -145,36 +145,17 @@ function UtilityBar() {
 function LogoCluster({ shrunk }: { shrunk: boolean }) {
   return (
     <Link href="/" className="group flex items-center gap-3 shrink-0">
-      <span
-        className={`relative flex items-center justify-center border border-border-strong group-hover:border-brand transition-all duration-300 ${
-          shrunk ? "w-10 h-10" : "w-12 h-12"
+      <Image
+        src="/images/assets/erp-logo-transparent.png"
+        alt="Esha Bargate Productions"
+        width={534}
+        height={772}
+        priority
+        className={`w-auto object-contain transition-all duration-300 ${
+          shrunk ? "h-9" : "h-11"
         }`}
-      >
-        <span className="pointer-events-none absolute -top-px -left-px w-1.5 h-1.5 border-t border-l border-brand opacity-0 group-hover:opacity-100 transition" />
-        <span className="pointer-events-none absolute -top-px -right-px w-1.5 h-1.5 border-t border-r border-brand opacity-0 group-hover:opacity-100 transition" />
-        <span className="pointer-events-none absolute -bottom-px -left-px w-1.5 h-1.5 border-b border-l border-brand opacity-0 group-hover:opacity-100 transition" />
-        <span className="pointer-events-none absolute -bottom-px -right-px w-1.5 h-1.5 border-b border-r border-brand opacity-0 group-hover:opacity-100 transition" />
-        <Image
-          src="/images/assets/erp-logo-transparent.png"
-          alt="Esha Bargate Productions"
-          width={534}
-          height={772}
-          priority
-          className={`w-auto object-contain transition-all duration-300 ${
-            shrunk ? "h-8" : "h-9"
-          }`}
-        />
-      </span>
-      <div className="flex flex-col leading-none">
-        <Logo className="text-sm whitespace-nowrap" />
-        <span
-          className={`hidden sm:block overflow-hidden font-heading text-[8px] tracking-[0.3em] text-subtle transition-all duration-300 ${
-            shrunk ? "max-h-0 mt-0 opacity-0" : "max-h-4 mt-1.5 opacity-100"
-          }`}
-        >
-          AI · CINEMA · DRAMA
-        </span>
-      </div>
+      />
+      <Logo className="text-sm sm:text-base whitespace-nowrap" />
     </Link>
   );
 }

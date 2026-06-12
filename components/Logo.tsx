@@ -7,7 +7,7 @@ export function Logo({ className = "" }: LogoProps) {
     <span
       className={`font-heading font-bold tracking-tight text-foreground ${className}`}
     >
-      Esha <span className="text-brand">Bargate</span> Productions
+      Esha Bargate Productions, LLC
     </span>
   );
 }
