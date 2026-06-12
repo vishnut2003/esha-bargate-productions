@@ -17,6 +17,8 @@ const navigate = [
   { label: "Careers", href: "#careers" },
   { label: "Press", href: "#press" },
   { label: "Contact", href: "#contact" },
+  { label: "Privacy Policy", href: "/privacy-policy" },
+  { label: "Terms of Use", href: "/terms-of-use" },
 ];
 
 const social = [
@@ -386,20 +388,6 @@ function LegalStrip() {
           EST. 2024 · SF · LA · MUMBAI · GLOBAL
           <span className="inline-block w-1 h-1 rounded-full bg-brand" />
         </span>
-        <div className="flex gap-6">
-          <Link
-            href="/privacy-policy"
-            className="hover:text-foreground transition"
-          >
-            PRIVACY
-          </Link>
-          <Link
-            href="/terms-of-use"
-            className="hover:text-foreground transition"
-          >
-            TERMS
-          </Link>
-        </div>
       </div>
     </div>
   );
