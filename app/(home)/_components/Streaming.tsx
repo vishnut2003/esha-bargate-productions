@@ -172,15 +172,6 @@ export function Streaming() {
                 <Arrow />
               </span>
             </Link>
-            <Link
-              href="mailto:contact@eshabargateproductions.com?subject=Download%20Catalog"
-              className="group inline-flex items-center gap-3 border border-border-strong hover:border-foreground text-foreground font-heading text-[11px] tracking-[0.2em] px-6 py-3.5 transition"
-            >
-              DOWNLOAD CATALOG
-              <span className="opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all">
-                <Arrow />
-              </span>
-            </Link>
           </div>
 
           <p className="mt-6 font-heading text-[10px] tracking-[0.25em] text-subtle">
