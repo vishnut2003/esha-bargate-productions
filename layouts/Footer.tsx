@@ -387,10 +387,16 @@ function LegalStrip() {
           <span className="inline-block w-1 h-1 rounded-full bg-brand" />
         </span>
         <div className="flex gap-6">
-          <Link href="#privacy" className="hover:text-foreground transition">
+          <Link
+            href="/privacy-policy"
+            className="hover:text-foreground transition"
+          >
             PRIVACY
           </Link>
-          <Link href="#terms" className="hover:text-foreground transition">
+          <Link
+            href="/terms-of-use"
+            className="hover:text-foreground transition"
+          >
             TERMS
           </Link>
         </div>
