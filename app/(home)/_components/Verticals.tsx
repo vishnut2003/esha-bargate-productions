@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { ScrollLink } from "@/components/ScrollLink";
 
 type CardData = {
   num: string;
@@ -151,7 +151,7 @@ export function Verticals() {
           <p className="font-heading text-[10px] tracking-[0.3em] text-subtle">
             01 — 03 / THREE VERTICALS · ONE VISION
           </p>
-          <Link
+          <ScrollLink
             href="#about"
             className="group inline-flex items-center gap-2 font-heading text-[11px] tracking-[0.25em] text-foreground hover:text-brand transition"
           >
@@ -159,7 +159,7 @@ export function Verticals() {
             <span className="transition-transform group-hover:translate-x-1">
               <Arrow />
             </span>
-          </Link>
+          </ScrollLink>
         </div>
       </div>
     </section>
@@ -254,7 +254,7 @@ function VerticalCard({
         <div className="flex-1" />
 
         <div className="flex items-center justify-between gap-3">
-          <Link
+          <ScrollLink
             href={href}
             className={`group/btn relative inline-flex items-center gap-2 font-heading text-[11px] tracking-[0.2em] px-5 py-3 transition overflow-hidden ${
               ctaStyle === "filled"
@@ -269,7 +269,7 @@ function VerticalCard({
             <span className="relative transition-transform group-hover/btn:translate-x-1">
               <Arrow />
             </span>
-          </Link>
+          </ScrollLink>
 
           <span className="font-heading text-[9px] tracking-[0.25em] text-subtle">
             {serviceCount}

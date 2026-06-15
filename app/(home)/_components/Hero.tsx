@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { ScrollLink } from "@/components/ScrollLink";
 
 const verticals = [
   { num: "01", label: "DIGITAL & AI FRONTIER", href: "#digital-ai" },
@@ -70,7 +70,7 @@ export function Hero() {
             </p>
 
             <div className="mt-6 flex flex-wrap gap-2.5">
-              <Link
+              <ScrollLink
                 href="#digital-ai"
                 className="group relative inline-flex items-center gap-3 bg-brand text-foreground font-heading text-[11px] tracking-[0.2em] px-6 py-3.5 transition overflow-hidden"
               >
@@ -79,8 +79,8 @@ export function Hero() {
                 <span className="relative transition-transform group-hover:translate-x-1">
                   <Arrow />
                 </span>
-              </Link>
-              <Link
+              </ScrollLink>
+              <ScrollLink
                 href="#cinematic-legacy"
                 className="group inline-flex items-center gap-3 border border-border-strong hover:border-foreground text-foreground font-heading text-[11px] tracking-[0.2em] px-6 py-3.5 transition"
               >
@@ -88,8 +88,8 @@ export function Hero() {
                 <span className="opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all">
                   <Arrow />
                 </span>
-              </Link>
-              <Link
+              </ScrollLink>
+              <ScrollLink
                 href="#vertical-drama"
                 className="group inline-flex items-center gap-3 border border-border-strong hover:border-foreground text-foreground font-heading text-[11px] tracking-[0.2em] px-6 py-3.5 transition"
               >
@@ -97,7 +97,7 @@ export function Hero() {
                 <span className="opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all">
                   <Arrow />
                 </span>
-              </Link>
+              </ScrollLink>
             </div>
           </div>
 
@@ -139,7 +139,7 @@ export function Hero() {
               </p>
               <div>
                 {verticals.map((v) => (
-                  <Link
+                  <ScrollLink
                     key={v.href}
                     href={v.href}
                     className="group flex items-center gap-4 py-2.5 border-b border-border hover:border-brand transition"
@@ -153,7 +153,7 @@ export function Hero() {
                     <span className="text-brand transition-transform group-hover:translate-x-1">
                       <Arrow />
                     </span>
-                  </Link>
+                  </ScrollLink>
                 ))}
               </div>
             </div>

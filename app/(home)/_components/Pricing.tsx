@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { ScrollLink } from "@/components/ScrollLink";
 
 type PlanCard = {
   tier: string;
@@ -408,7 +408,7 @@ function PlanCardView({
 
         <div className="flex-1" />
 
-        <Link
+        <ScrollLink
           href={href}
           className={`group/btn relative inline-flex items-center justify-center gap-2 font-heading text-[11px] tracking-[0.2em] px-5 py-4 transition overflow-hidden ${
             popular
@@ -423,7 +423,7 @@ function PlanCardView({
           <span className="relative transition-transform group-hover/btn:translate-x-1">
             <Arrow />
           </span>
-        </Link>
+        </ScrollLink>
       </div>
 
       <span className="pointer-events-none absolute bottom-0 left-0 right-0 h-[2px] origin-center scale-x-0 bg-gradient-to-r from-transparent via-brand to-transparent transition-transform duration-700 group-hover:scale-x-100" />
@@ -475,7 +475,7 @@ function PartnershipCardView({
 
         <div className="h-px bg-border mb-6" />
 
-        <Link
+        <ScrollLink
           href="#contact"
           className={`group/btn relative inline-flex items-center justify-center gap-2 font-heading text-[11px] tracking-[0.2em] px-5 py-4 transition overflow-hidden ${
             popular
@@ -490,7 +490,7 @@ function PartnershipCardView({
           <span className="relative transition-transform group-hover/btn:translate-x-1">
             <Arrow />
           </span>
-        </Link>
+        </ScrollLink>
 
         <a
           href="mailto:contact@eshabargateproductions.com"
@@ -545,7 +545,7 @@ function ServiceRowView({
       </div>
 
       <div className="lg:col-span-3 lg:flex lg:justify-end">
-        <Link
+        <ScrollLink
           href={href}
           className="group/btn inline-flex items-center gap-2 font-heading text-[11px] tracking-[0.2em] px-5 py-3 border border-border-strong hover:border-foreground text-foreground transition"
         >
@@ -553,7 +553,7 @@ function ServiceRowView({
           <span className="transition-transform group-hover/btn:translate-x-1">
             <Arrow />
           </span>
-        </Link>
+        </ScrollLink>
       </div>
     </div>
   );

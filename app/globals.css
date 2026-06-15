@@ -46,6 +46,11 @@
   }
 }
 
+html {
+  /* Clear the sticky header when jumping to a section via /#id fallback. */
+  scroll-padding-top: 100px;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);

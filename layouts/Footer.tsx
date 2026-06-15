@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Logo } from "@/components/Logo";
+import { ScrollLink } from "@/components/ScrollLink";
 
 const verticals = [
   { num: "01", label: "Digital & AI Frontier", href: "#digital-ai" },
@@ -108,7 +109,7 @@ function CtaSection() {
             </h2>
           </div>
           <div className="md:col-span-4 flex md:justify-end">
-            <Link
+            <ScrollLink
               href="#contact"
               className="group inline-flex items-center gap-3 bg-brand hover:bg-brand-hover text-foreground font-heading text-[11px] tracking-[0.25em] px-7 py-4 transition"
             >
@@ -116,7 +117,7 @@ function CtaSection() {
               <span className="transition-transform group-hover:translate-x-1">
                 <ArrowRight />
               </span>
-            </Link>
+            </ScrollLink>
           </div>
         </div>
 
@@ -212,7 +213,7 @@ function MainGrid() {
         <ul className="space-y-4">
           {verticals.map((v) => (
             <li key={v.href}>
-              <Link href={v.href} className="group flex items-baseline gap-3">
+              <ScrollLink href={v.href} className="group flex items-baseline gap-3">
                 <span className="font-heading text-[10px] tracking-[0.2em] text-brand shrink-0">
                   {v.num}
                 </span>
@@ -220,7 +221,7 @@ function MainGrid() {
                   {v.label}
                   <span className="absolute left-0 right-0 -bottom-0.5 h-px origin-left scale-x-0 bg-brand transition-transform duration-300 group-hover:scale-x-100" />
                 </span>
-              </Link>
+              </ScrollLink>
             </li>
           ))}
         </ul>
@@ -231,17 +232,29 @@ function MainGrid() {
           NAVIGATE
         </h3>
         <ul className="space-y-3">
-          {navigate.map((item) => (
-            <li key={item.href}>
-              <Link
-                href={item.href}
-                className="group relative inline-block text-sm text-muted hover:text-foreground transition"
-              >
+          {navigate.map((item) => {
+            const linkClassName =
+              "group relative inline-block text-sm text-muted hover:text-foreground transition";
+            const inner = (
+              <>
                 {item.label}
                 <span className="absolute left-0 right-0 -bottom-0.5 h-px origin-left scale-x-0 bg-brand transition-transform duration-300 group-hover:scale-x-100" />
-              </Link>
-            </li>
-          ))}
+              </>
+            );
+            return (
+              <li key={item.href}>
+                {item.href.startsWith("#") ? (
+                  <ScrollLink href={item.href} className={linkClassName}>
+                    {inner}
+                  </ScrollLink>
+                ) : (
+                  <Link href={item.href} className={linkClassName}>
+                    {inner}
+                  </Link>
+                )}
+              </li>
+            );
+          })}
         </ul>
       </div>
 

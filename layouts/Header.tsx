@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Logo } from "@/components/Logo";
+import { ScrollLink } from "@/components/ScrollLink";
 
 const verticals = [
   {
@@ -83,7 +84,7 @@ export function Header() {
             </nav>
 
             <div className="flex items-center gap-2">
-              <Link
+              <ScrollLink
                 href="#contact"
                 className="group relative hidden md:inline-flex items-center gap-2 bg-brand text-foreground font-heading text-[10px] tracking-[0.25em] px-5 py-2.5 transition overflow-hidden"
               >
@@ -92,7 +93,7 @@ export function Header() {
                 <span className="relative transition-transform group-hover:translate-x-1">
                   <ArrowRight />
                 </span>
-              </Link>
+              </ScrollLink>
 
               <button
                 type="button"
@@ -162,13 +163,13 @@ function LogoCluster({ shrunk }: { shrunk: boolean }) {
 
 function NavLink({ label, href }: { label: string; href: string }) {
   return (
-    <Link
+    <ScrollLink
       href={href}
       className="group relative px-3 py-2 text-muted hover:text-foreground transition"
     >
       {label}
       <span className="absolute left-3 right-3 -bottom-px h-px origin-left scale-x-0 bg-brand transition-transform duration-300 group-hover:scale-x-100" />
-    </Link>
+    </ScrollLink>
   );
 }
 
@@ -207,7 +208,7 @@ function VerticalsMegaMenu() {
 
             <div className="relative grid grid-cols-3 gap-4">
               {verticals.map((v) => (
-                <Link
+                <ScrollLink
                   key={v.href}
                   href={v.href}
                   className="group/card relative bg-background/60 border border-border hover:border-brand p-5 transition"
@@ -239,7 +240,7 @@ function VerticalsMegaMenu() {
                       <ArrowRight />
                     </span>
                   </span>
-                </Link>
+                </ScrollLink>
               ))}
             </div>
 
@@ -247,7 +248,7 @@ function VerticalsMegaMenu() {
               <p className="font-heading text-[10px] tracking-[0.3em] text-subtle">
                 THREE VERTICALS · ONE VISION
               </p>
-              <Link
+              <ScrollLink
                 href="#about"
                 className="group/all inline-flex items-center gap-2 font-heading text-[10px] tracking-[0.25em] text-foreground hover:text-brand transition"
               >
@@ -255,7 +256,7 @@ function VerticalsMegaMenu() {
                 <span className="transition-transform group-hover/all:translate-x-1">
                   <ArrowRight />
                 </span>
-              </Link>
+              </ScrollLink>
             </div>
           </div>
         </div>
@@ -299,7 +300,7 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
             </p>
             <div className="grid gap-3">
               {verticals.map((v) => (
-                <Link
+                <ScrollLink
                   key={v.href}
                   href={v.href}
                   onClick={onClose}
@@ -315,7 +316,7 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
                     <span className="text-xs text-muted">{v.desc}</span>
                   </div>
                   <span className="text-brand">{v.glyph}</span>
-                </Link>
+                </ScrollLink>
               ))}
             </div>
           </div>
@@ -326,27 +327,27 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8">
               {primaryNav.map((item) => (
-                <Link
+                <ScrollLink
                   key={item.href}
                   href={item.href}
                   onClick={onClose}
                   className="font-heading text-2xl tracking-tight text-foreground hover:text-brand transition py-3 border-b border-border"
                 >
                   {item.label}
-                </Link>
+                </ScrollLink>
               ))}
             </div>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-3">
-            <Link
+            <ScrollLink
               href="#contact"
               onClick={onClose}
               className="inline-flex items-center justify-center gap-2 bg-brand hover:bg-brand-hover text-foreground font-heading text-[11px] tracking-[0.25em] px-7 py-4 transition"
             >
               GET IN TOUCH
               <ArrowRight />
-            </Link>
+            </ScrollLink>
           </div>
         </div>
       </div>

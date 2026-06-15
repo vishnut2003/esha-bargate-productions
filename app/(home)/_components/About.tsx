@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import { ScrollLink } from "@/components/ScrollLink";
 
 const stats = [
   { value: "2+", label: "CONTINENTS" },
@@ -101,7 +101,7 @@ export function About() {
             </div>
 
             <div className="mt-8">
-              <Link
+              <ScrollLink
                 href="#streaming"
                 className="group inline-flex items-center gap-3 border border-border-strong hover:border-foreground text-foreground font-heading text-[11px] tracking-[0.2em] px-6 py-3.5 transition"
               >
@@ -109,7 +109,7 @@ export function About() {
                 <span className="transition-transform group-hover:translate-x-1">
                   <Arrow />
                 </span>
-              </Link>
+              </ScrollLink>
             </div>
           </div>
 
