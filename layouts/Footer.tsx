@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Logo } from "@/components/Logo";
 import { ScrollLink } from "@/components/ScrollLink";
+import { SubscribeForm } from "@/components/SubscribeForm";
 
 const verticals = [
   { num: "01", label: "Digital & AI Frontier", href: "#digital-ai" },
@@ -347,29 +348,7 @@ function NewsletterSection() {
         </div>
 
         <div className="md:col-span-7">
-          <form className="flex flex-col sm:flex-row gap-3">
-            <div className="relative flex-1">
-              <span className="absolute left-4 top-1/2 -translate-y-1/2 text-subtle pointer-events-none">
-                <MailIcon />
-              </span>
-              <input
-                type="email"
-                name="email"
-                placeholder="your.email@studio.com"
-                required
-                className="w-full bg-surface/40 border border-border-strong text-foreground pl-11 pr-5 py-4 outline-none text-sm placeholder:text-subtle focus:border-brand focus:bg-surface transition"
-              />
-            </div>
-            <button
-              type="submit"
-              className="group inline-flex items-center justify-center gap-3 bg-brand hover:bg-brand-hover text-foreground font-heading text-[11px] tracking-[0.25em] px-7 py-4 transition shrink-0"
-            >
-              SUBSCRIBE
-              <span className="transition-transform group-hover:translate-x-1">
-                <ArrowRight />
-              </span>
-            </button>
-          </form>
+          <SubscribeForm />
 
           <ul className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-2 font-heading text-[10px] tracking-[0.2em] text-subtle">
             <li className="inline-flex items-center gap-2">
@@ -418,24 +397,6 @@ function ArrowRight() {
         strokeLinecap="round"
         strokeLinejoin="round"
       />
-    </svg>
-  );
-}
-
-function MailIcon() {
-  return (
-    <svg
-      width="16"
-      height="16"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <rect x="3" y="5" width="18" height="14" rx="2" />
-      <path d="m3 7 9 6 9-6" />
     </svg>
   );
 }
