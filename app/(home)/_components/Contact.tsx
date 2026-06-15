@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ContactForm } from "@/components/ContactForm";
 
 const emails = [
@@ -214,7 +215,13 @@ export function Contact() {
 
               <div className="mt-8 pt-6 border-t border-border flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
                 <p className="font-heading text-[9px] tracking-[0.2em] text-subtle">
-                  BY SUBMITTING YOU AGREE TO OUR PRIVACY POLICY
+                  BY SUBMITTING YOU AGREE TO OUR{" "}
+                  <Link
+                    href="/privacy-policy"
+                    className="text-foreground underline underline-offset-2 hover:text-brand transition"
+                  >
+                    PRIVACY POLICY
+                  </Link>
                 </p>
                 <p className="inline-flex items-center gap-2 font-heading text-[9px] tracking-[0.25em] text-subtle">
                   <span className="relative inline-flex h-1.5 w-1.5">
