@@ -8,6 +8,7 @@ type Partner = {
   tags: string[];
   highlightLabel: string;
   highlightValue: string;
+  upcomingValue?: string;
   href: string;
   glow: string;
 };
@@ -34,6 +35,7 @@ const partners: Partner[] = [
     tags: ["Feature Films", "Video Production", "Post Production"],
     highlightLabel: "JOINT PROJECT",
     highlightValue: "Sarhadain",
+    upcomingValue: "Black Morning and Stolen Innocence",
     href: "#",
     glow: "from-amber-500/20 to-amber-900/20",
   },
@@ -111,6 +113,7 @@ function PartnerCard({
   tags,
   highlightLabel,
   highlightValue,
+  upcomingValue,
   href,
   glow,
 }: Partner) {
@@ -169,6 +172,16 @@ function PartnerCard({
               <p className="mt-1 font-heading italic text-brand text-base">
                 {highlightValue}
               </p>
+            )}
+            {upcomingValue && (
+              <>
+                <p className="mt-3 font-heading text-[9px] tracking-[0.3em] text-subtle">
+                  UPCOMING PROJECTS
+                </p>
+                <p className="mt-1 font-heading italic text-brand text-base">
+                  {upcomingValue}
+                </p>
+              </>
             )}
           </div>
 
