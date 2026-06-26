@@ -20,8 +20,8 @@ const partners: Partner[] = [
     description:
       "A Los Angeles-based production powerhouse specializing in script development, script supervision, and production support from script to screen.",
     tags: ["Script Development", "Production Support", "Film"],
-    highlightLabel: "UPCOMING PROJECTS",
-    highlightValue: " Black Morning and Stolen Innocence",
+    highlightLabel: "STREAMING",
+    highlightValue: "Streamed on Apple TV and Google TV",
     href: "#",
     glow: "from-blue-500/20 to-blue-900/20",
   },

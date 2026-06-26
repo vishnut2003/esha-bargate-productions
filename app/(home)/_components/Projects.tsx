@@ -30,7 +30,6 @@ const projects: Project[] = [
       "A short drama following Shayna Johnson — Harvard Law trained mediator — navigating a messy family court case. Dir: Mugisha Feruzi & Kathy-Ann Hart.",
     badges: ["Short Film", "Drama", "IMDb: tt38821662"],
     status: "COMPLETED",
-    meta: "Released April 14, 2025",
     poster: "/images/home/projects/mediator-poster.jpg",
     href: "https://www.imdb.com/title/tt38821662/",
   },

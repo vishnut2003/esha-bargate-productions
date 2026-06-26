@@ -194,7 +194,7 @@ const consultingServices: ServiceRow[] = [
     price: "$80",
     unit: "/ hour",
     cta: "BOOK SESSION",
-    href: "#contact",
+    href: "https://calendar.app.google/qvbbJXV8sQW4Lqk3A",
   },
 ];
 
@@ -545,15 +545,29 @@ function ServiceRowView({
       </div>
 
       <div className="lg:col-span-3 lg:flex lg:justify-end">
-        <ScrollLink
-          href={href}
-          className="group/btn inline-flex items-center gap-2 font-heading text-[11px] tracking-[0.2em] px-5 py-3 border border-border-strong hover:border-foreground text-foreground transition"
-        >
-          {cta}
-          <span className="transition-transform group-hover/btn:translate-x-1">
-            <Arrow />
-          </span>
-        </ScrollLink>
+        {href.startsWith("http") ? (
+          <a
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group/btn inline-flex items-center gap-2 font-heading text-[11px] tracking-[0.2em] px-5 py-3 border border-border-strong hover:border-foreground text-foreground transition"
+          >
+            {cta}
+            <span className="transition-transform group-hover/btn:translate-x-1">
+              <Arrow />
+            </span>
+          </a>
+        ) : (
+          <ScrollLink
+            href={href}
+            className="group/btn inline-flex items-center gap-2 font-heading text-[11px] tracking-[0.2em] px-5 py-3 border border-border-strong hover:border-foreground text-foreground transition"
+          >
+            {cta}
+            <span className="transition-transform group-hover/btn:translate-x-1">
+              <Arrow />
+            </span>
+          </ScrollLink>
+        )}
       </div>
     </div>
   );
