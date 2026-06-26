@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { BOOKING_URL } from "@/lib/site";
 
 const whyInvest = [
   {
@@ -123,7 +124,9 @@ export function Investors() {
             </p>
 
             <Link
-              href="mailto:contact@eshabargateproductions.com?subject=Investor%20Relations"
+              href={BOOKING_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="group relative inline-flex items-center gap-3 mt-8 bg-brand text-foreground font-heading text-[11px] tracking-[0.2em] px-7 py-4 transition overflow-hidden"
             >
               <span className="absolute inset-0 bg-brand-hover translate-x-[-101%] group-hover:translate-x-0 transition-transform duration-500" />

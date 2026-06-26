@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ContactForm } from "@/components/ContactForm";
+import { BOOKING_URL } from "@/lib/site";
 
 const emails = [
   { label: "GENERAL", value: "contact@eshabargateproductions.com" },
@@ -92,6 +93,18 @@ export function Contact() {
                 Open for projects, collaborations, and partnerships across SF ·
                 LA · MUMBAI · GLOBAL.
               </p>
+
+              <a
+                href={BOOKING_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group mt-5 inline-flex items-center gap-2 bg-brand text-foreground font-heading text-[10px] tracking-[0.25em] px-5 py-3 transition hover:bg-brand-hover"
+              >
+                BOOK A CALL
+                <span className="transition-transform group-hover:translate-x-1">
+                  <Arrow />
+                </span>
+              </a>
             </div>
 
             <div>

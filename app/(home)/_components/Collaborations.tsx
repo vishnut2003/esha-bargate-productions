@@ -22,7 +22,7 @@ const partners: Partner[] = [
       "A Los Angeles-based production powerhouse specializing in script development, script supervision, and production support from script to screen.",
     tags: ["Script Development", "Production Support", "Film"],
     highlightLabel: "STREAMING",
-    highlightValue: "Streamed on Apple TV and Google TV",
+    highlightValue: "",
     href: "#",
     glow: "from-blue-500/20 to-blue-900/20",
   },

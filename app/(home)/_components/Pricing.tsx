@@ -1,4 +1,5 @@
 import { ScrollLink } from "@/components/ScrollLink";
+import { BOOKING_URL } from "@/lib/site";
 
 type PlanCard = {
   tier: string;
@@ -29,7 +30,7 @@ const retainers: PlanCard[] = [
       "1 round of revisions per asset",
     ],
     cta: "GET STARTED",
-    href: "#contact",
+    href: BOOKING_URL,
     popular: false,
   },
   {
@@ -49,7 +50,7 @@ const retainers: PlanCard[] = [
       "4-business-day priority turnaround",
     ],
     cta: "START GROWING",
-    href: "#contact",
+    href: BOOKING_URL,
     popular: true,
   },
   {
@@ -70,7 +71,7 @@ const retainers: PlanCard[] = [
       "Unlimited revisions within scope",
     ],
     cta: "BOOK A CALL",
-    href: "#contact",
+    href: BOOKING_URL,
     popular: false,
   },
 ];
@@ -194,7 +195,7 @@ const consultingServices: ServiceRow[] = [
     price: "$80",
     unit: "/ hour",
     cta: "BOOK SESSION",
-    href: "https://calendar.app.google/qvbbJXV8sQW4Lqk3A",
+    href: BOOKING_URL,
   },
 ];
 
@@ -408,26 +409,49 @@ function PlanCardView({
 
         <div className="flex-1" />
 
-        <ScrollLink
-          href={href}
-          className={`group/btn relative inline-flex items-center justify-center gap-2 font-heading text-[11px] tracking-[0.2em] px-5 py-4 transition overflow-hidden ${
-            popular
-              ? "bg-brand text-foreground"
-              : "border border-border-strong hover:border-foreground text-foreground"
-          }`}
-        >
-          {popular && (
-            <span className="absolute inset-0 bg-brand-hover translate-x-[-101%] group-hover/btn:translate-x-0 transition-transform duration-500" />
-          )}
-          <span className="relative">{cta}</span>
-          <span className="relative transition-transform group-hover/btn:translate-x-1">
-            <Arrow />
-          </span>
-        </ScrollLink>
+        <CtaButton href={href} cta={cta} popular={popular} />
       </div>
 
       <span className="pointer-events-none absolute bottom-0 left-0 right-0 h-[2px] origin-center scale-x-0 bg-gradient-to-r from-transparent via-brand to-transparent transition-transform duration-700 group-hover:scale-x-100" />
     </div>
+  );
+}
+
+function CtaButton({
+  href,
+  cta,
+  popular,
+}: {
+  href: string;
+  cta: string;
+  popular: boolean;
+}) {
+  const className = `group/btn relative inline-flex items-center justify-center gap-2 font-heading text-[11px] tracking-[0.2em] px-5 py-4 transition overflow-hidden ${
+    popular
+      ? "bg-brand text-foreground"
+      : "border border-border-strong hover:border-foreground text-foreground"
+  }`;
+
+  const inner = (
+    <>
+      {popular && (
+        <span className="absolute inset-0 bg-brand-hover translate-x-[-101%] group-hover/btn:translate-x-0 transition-transform duration-500" />
+      )}
+      <span className="relative">{cta}</span>
+      <span className="relative transition-transform group-hover/btn:translate-x-1">
+        <Arrow />
+      </span>
+    </>
+  );
+
+  return href.startsWith("http") ? (
+    <a href={href} target="_blank" rel="noopener noreferrer" className={className}>
+      {inner}
+    </a>
+  ) : (
+    <ScrollLink href={href} className={className}>
+      {inner}
+    </ScrollLink>
   );
 }
 
@@ -475,22 +499,7 @@ function PartnershipCardView({
 
         <div className="h-px bg-border mb-6" />
 
-        <ScrollLink
-          href="#contact"
-          className={`group/btn relative inline-flex items-center justify-center gap-2 font-heading text-[11px] tracking-[0.2em] px-5 py-4 transition overflow-hidden ${
-            popular
-              ? "bg-brand text-foreground"
-              : "border border-border-strong hover:border-foreground text-foreground"
-          }`}
-        >
-          {popular && (
-            <span className="absolute inset-0 bg-brand-hover translate-x-[-101%] group-hover/btn:translate-x-0 transition-transform duration-500" />
-          )}
-          <span className="relative">BOOK A CALL</span>
-          <span className="relative transition-transform group-hover/btn:translate-x-1">
-            <Arrow />
-          </span>
-        </ScrollLink>
+        <CtaButton href={BOOKING_URL} cta="BOOK A CALL" popular={popular} />
 
         <a
           href="mailto:contact@eshabargateproductions.com"
