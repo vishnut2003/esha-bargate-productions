@@ -136,7 +136,7 @@ export function Careers() {
               <Arrow />
             </span>
           </Link>
-          <p className="mt-5 font-heading text-[10px] tracking-[0.25em] text-subtle">
+          <p className="mt-5 font-heading font-bold text-sm tracking-[0.25em] text-foreground">
             eshabargateproductions@gmail.com
           </p>
         </div>
