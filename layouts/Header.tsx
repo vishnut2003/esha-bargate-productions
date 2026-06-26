@@ -124,7 +124,7 @@ function UtilityBar() {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand opacity-75" />
               <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-brand" />
             </span>
-            <span className="text-brand whitespace-nowrap">NOW STREAMING</span>
+            <span className="text-brand whitespace-nowrap">NOW STREAMED</span>
             <span className="hidden sm:inline text-border-strong">/</span>
             <span className="hidden sm:inline text-muted truncate">
               SARHADAIN on APPLE TV &amp; GOOGLE TV
