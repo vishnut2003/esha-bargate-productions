@@ -136,9 +136,12 @@ export function Investors() {
               </span>
             </Link>
 
-            <p className="mt-6 font-heading text-[10px] tracking-[0.25em] text-subtle">
+            <a
+              href="mailto:contact@eshabargateproductions.com"
+              className="mt-6 block font-heading text-xs sm:text-sm font-semibold tracking-[0.25em] text-muted hover:text-foreground transition"
+            >
               contact@eshabargateproductions.com
-            </p>
+            </a>
           </div>
         </div>
       </div>
