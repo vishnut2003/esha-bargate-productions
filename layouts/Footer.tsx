@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Logo } from "@/components/Logo";
 import { ScrollLink } from "@/components/ScrollLink";
 import { SubscribeForm } from "@/components/SubscribeForm";
+import { BOOKING_URL } from "@/lib/site";
 
 const verticals = [
   { num: "01", label: "Digital & AI Frontier", href: "#digital-ai" },
@@ -110,15 +111,17 @@ function CtaSection() {
             </h2>
           </div>
           <div className="md:col-span-4 flex md:justify-end">
-            <ScrollLink
-              href="#contact"
+            <a
+              href={BOOKING_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="group inline-flex items-center gap-3 bg-brand hover:bg-brand-hover text-foreground font-heading text-[11px] tracking-[0.25em] px-7 py-4 transition"
             >
               GET IN TOUCH
               <span className="transition-transform group-hover:translate-x-1">
                 <ArrowRight />
               </span>
-            </ScrollLink>
+            </a>
           </div>
         </div>
 

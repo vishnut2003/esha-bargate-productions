@@ -177,11 +177,55 @@ const placementServices: ServiceRow[] = [
 const consultingServices: ServiceRow[] = [
   {
     kind: "PROJECT-BASED",
-    name: "AI Commercials & Media Productions",
+    name: "AI Media Productions",
     description:
       "Custom AI-generated commercials, brand films, and short-form media productions. Ideal for product launches, ad campaigns, and one-off creative projects.",
     meta: "15 sec – 1 min // Pricing varies by complexity & usage rights",
     price: "$700 – $2,000",
+    unit: "/ project",
+    cta: "BOOK A CONSULTATION",
+    href: BOOKING_URL,
+  },
+  {
+    kind: "PROJECT-BASED",
+    name: "AI Trailer",
+    description:
+      "Cinematic AI-generated trailers to tease a film, series, or product. Perfect for festival submissions, pre-launch hype, and social teasers.",
+    meta: "Delivery in 1–2 weeks // Final pricing scales with length & revisions",
+    price: "Starting at $500",
+    unit: "/ project",
+    cta: "BOOK A CONSULTATION",
+    href: BOOKING_URL,
+  },
+  {
+    kind: "PROJECT-BASED",
+    name: "AI Short Film",
+    description:
+      "Fully AI-produced short films from concept to final cut. Ideal for proof-of-concept pitches, festival entries, and branded storytelling.",
+    meta: "Delivery in 2–4 weeks // Final pricing scales with runtime & complexity",
+    price: "Starting at $1,500",
+    unit: "/ project",
+    cta: "BOOK A CONSULTATION",
+    href: BOOKING_URL,
+  },
+  {
+    kind: "PROJECT-BASED",
+    name: "Brand Video",
+    description:
+      "Polished AI-driven brand videos that capture your story, values, and offering. Built for websites, social, and campaign launches.",
+    meta: "Delivery in 1–2 weeks // Final pricing scales with length & usage rights",
+    price: "Starting at $900",
+    unit: "/ project",
+    cta: "BOOK A CONSULTATION",
+    href: BOOKING_URL,
+  },
+  {
+    kind: "PROJECT-BASED",
+    name: "AI Product Launch Video",
+    description:
+      "High-impact launch videos that showcase a new product or service. Designed to drive attention and conversions across paid and organic channels.",
+    meta: "Delivery in 1–2 weeks // Final pricing scales with deliverables & revisions",
+    price: "Starting at $1,200",
     unit: "/ project",
     cta: "BOOK A CONSULTATION",
     href: BOOKING_URL,
@@ -195,6 +239,50 @@ const consultingServices: ServiceRow[] = [
     price: "$80",
     unit: "/ hour",
     cta: "BOOK SESSION",
+    href: BOOKING_URL,
+  },
+  {
+    kind: "PROJECT-BASED",
+    name: "Pitch Deck",
+    description:
+      "Investor- and buyer-ready pitch decks for films, series, and brand concepts. We shape your story, structure, and visuals to win the room.",
+    meta: "Delivery in 1–2 weeks // Final pricing scales with scope & revisions",
+    price: "Starting at $350",
+    unit: "/ project",
+    cta: "BOOK A CONSULTATION",
+    href: BOOKING_URL,
+  },
+  {
+    kind: "PROJECT-BASED",
+    name: "Distribution Strategy",
+    description:
+      "A tailored roadmap for getting your project in front of the right audiences and platforms. Covers positioning, channels, and rollout planning.",
+    meta: "Delivery in 1–2 weeks // Final pricing scales with scope & deliverables",
+    price: "Starting at $500",
+    unit: "/ project",
+    cta: "BOOK A CONSULTATION",
+    href: BOOKING_URL,
+  },
+  {
+    kind: "PROJECT-BASED",
+    name: "Festival Submission Strategy",
+    description:
+      "Targeted festival planning to maximize selections and exposure. We identify the right festivals, deadlines, and materials for your project.",
+    meta: "Delivery in 1–2 weeks // Final pricing scales with number of festivals",
+    price: "Starting at $300",
+    unit: "/ project",
+    cta: "BOOK A CONSULTATION",
+    href: BOOKING_URL,
+  },
+  {
+    kind: "BY THE HOUR",
+    name: "Streaming / OTT Distribution Consultation",
+    description:
+      "Advisory on getting your content onto streaming and OTT platforms. Covers platform fit, aggregators, deliverables, and deal navigation.",
+    meta: "Hourly or package pricing // Booked via calendar",
+    price: "$80",
+    unit: "/ hour or package",
+    cta: "BOOK A CONSULTATION",
     href: BOOKING_URL,
   },
 ];
@@ -311,14 +399,19 @@ export function Pricing() {
           <div className="inline-flex items-center gap-3 mb-6">
             <span className="block w-10 h-px bg-brand" />
             <span className="font-heading text-[11px] tracking-[0.3em] text-brand">
-              BRAND INTEGRATION &amp; PLACEMENT
+              AI MARKETING &amp; CREATIVE SERVICES
             </span>
             <span className="block w-10 h-px bg-brand" />
           </div>
 
           <h2 className="font-heading font-bold tracking-tight leading-[1] text-4xl sm:text-5xl md:text-6xl text-foreground">
-            Monthly Retainers
+            Creative Growth Retainers
           </h2>
+
+          <p className="mt-8 max-w-2xl mx-auto text-sm text-muted leading-relaxed">
+            Ongoing AI-powered content creation, marketing strategy, and brand
+            support designed to help your business grow consistently.
+          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">

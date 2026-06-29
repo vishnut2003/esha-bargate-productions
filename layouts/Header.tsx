@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Logo } from "@/components/Logo";
 import { ScrollLink } from "@/components/ScrollLink";
+import { BOOKING_URL } from "@/lib/site";
 
 const verticals = [
   {
@@ -84,8 +85,10 @@ export function Header() {
             </nav>
 
             <div className="flex items-center gap-2">
-              <ScrollLink
-                href="#contact"
+              <a
+                href={BOOKING_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group relative hidden md:inline-flex items-center gap-2 bg-brand text-foreground font-heading text-[10px] tracking-[0.25em] px-5 py-2.5 transition overflow-hidden"
               >
                 <span className="absolute inset-0 bg-brand-hover translate-x-[-101%] group-hover:translate-x-0 transition-transform duration-500" />
@@ -93,7 +96,7 @@ export function Header() {
                 <span className="relative transition-transform group-hover:translate-x-1">
                   <ArrowRight />
                 </span>
-              </ScrollLink>
+              </a>
 
               <button
                 type="button"
@@ -340,14 +343,16 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-3">
-            <ScrollLink
-              href="#contact"
+            <a
+              href={BOOKING_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={onClose}
               className="inline-flex items-center justify-center gap-2 bg-brand hover:bg-brand-hover text-foreground font-heading text-[11px] tracking-[0.25em] px-7 py-4 transition"
             >
               GET IN TOUCH
               <ArrowRight />
-            </ScrollLink>
+            </a>
           </div>
         </div>
       </div>
