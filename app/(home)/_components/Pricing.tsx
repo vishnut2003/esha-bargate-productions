@@ -183,8 +183,8 @@ const consultingServices: ServiceRow[] = [
     meta: "15 sec – 1 min // Pricing varies by complexity & usage rights",
     price: "$700 – $2,000",
     unit: "/ project",
-    cta: "REQUEST QUOTE",
-    href: "#contact",
+    cta: "BOOK A CONSULTATION",
+    href: BOOKING_URL,
   },
   {
     kind: "BY THE HOUR",
