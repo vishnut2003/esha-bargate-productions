@@ -158,8 +158,8 @@ const placementServices: ServiceRow[] = [
     meta: "Background → Hero → Storyline // Pricing scales with production reach & rights",
     price: "$2,500 – $50,000+",
     unit: "/ placement",
-    cta: "GET QUOTE",
-    href: "#contact",
+    cta: "BOOK A CONSULTATION",
+    href: BOOKING_URL,
   },
   {
     kind: "PERFORMANCE-BASED",
@@ -169,8 +169,8 @@ const placementServices: ServiceRow[] = [
     meta: "15–20% commission // On placements valued at $25,000+ // $5,000 strategy retainer applies",
     price: "15–20%",
     unit: "commission",
-    cta: "DISCUSS TERMS",
-    href: "#contact",
+    cta: "BOOK A CONSULTATION",
+    href: BOOKING_URL,
   },
 ];
 
