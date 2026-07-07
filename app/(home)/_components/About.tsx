@@ -2,7 +2,6 @@ import Image from "next/image";
 import { ScrollLink } from "@/components/ScrollLink";
 
 const stats = [
-  { value: "2+", label: "CONTINENTS" },
   { value: "3+", label: "COLLABORATIONS" },
   { value: "3", label: "VERTICALS" },
   { value: "100%", label: "INCLUSIVE" },
@@ -35,7 +34,7 @@ export function About() {
       </div>
 
       <div className="relative max-w-[1400px] mx-auto px-6">
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mb-20 pb-12 border-b border-border">
+        <div className="grid grid-cols-3 gap-6 mb-20 pb-12 border-b border-border">
           {stats.map((s) => (
             <div key={s.label} className="text-center">
               <p className="font-heading font-bold text-5xl sm:text-6xl text-brand/80 leading-none tracking-tight">

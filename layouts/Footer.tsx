@@ -42,7 +42,6 @@ const marqueeWords = [
 ];
 
 const stats = [
-  { value: "2+", label: "CONTINENTS" },
   { value: "3+", label: "COLLABORATIONS" },
   { value: "3", label: "VERTICALS" },
   { value: "100%", label: "INCLUSIVE" },
@@ -125,7 +124,7 @@ function CtaSection() {
           </div>
         </div>
 
-        <div className="mt-16 pt-10 border-t border-border grid grid-cols-2 sm:grid-cols-4 gap-6">
+        <div className="mt-16 pt-10 border-t border-border grid grid-cols-3 gap-6">
           {stats.map((s) => (
             <div key={s.label}>
               <p className="font-heading font-bold text-3xl sm:text-4xl text-brand-light leading-none">
