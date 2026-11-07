@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { DEADLINE_ARTICLE_URL } from "@/lib/site";
 
 export function Press() {
   return (
@@ -73,7 +74,7 @@ export function Press() {
             </p>
 
             <Link
-              href="https://deadline.com/2024/03/esha-bargate-production-company-hollywood-india-1235844587/"
+              href={DEADLINE_ARTICLE_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="group/btn inline-flex items-center gap-3 border border-border-strong hover:border-foreground text-foreground font-heading text-[11px] tracking-[0.2em] px-6 py-3.5 transition w-fit"

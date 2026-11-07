@@ -1,4 +1,7 @@
+import Image from "next/image";
+import Link from "next/link";
 import { ScrollLink } from "@/components/ScrollLink";
+import { DEADLINE_ARTICLE_URL } from "@/lib/site";
 
 const verticals = [
   { num: "01", label: "DIGITAL & AI FRONTIER", href: "#digital-ai" },
@@ -31,7 +34,7 @@ export function Hero() {
 
       <div className="relative max-w-[1400px] mx-auto px-6 min-h-[calc(100vh-120px)] flex items-center py-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 w-full">
-          <div className="lg:col-span-8">
+          <div className="lg:col-span-7">
             <div className="flex items-center gap-4 mb-6 flex-wrap">
               <span className="font-heading text-[10px] tracking-[0.4em] text-subtle">
                 / 01 — EST. 2024
@@ -101,8 +104,10 @@ export function Hero() {
             </div>
           </div>
 
-          <aside className="lg:col-span-4 hidden lg:flex flex-col gap-5 justify-center">
-            <div className="relative border border-border bg-surface/40 backdrop-blur-sm p-5">
+          <aside className="lg:col-span-5 flex flex-col gap-5 justify-center">
+            <DeadlineFeatureCard />
+
+            <div className="relative hidden lg:block border border-border bg-surface/40 backdrop-blur-sm p-5">
               <span className="pointer-events-none absolute -top-px -left-px w-3 h-3 border-t border-l border-brand" />
               <span className="pointer-events-none absolute -top-px -right-px w-3 h-3 border-t border-r border-brand" />
               <span className="pointer-events-none absolute -bottom-px -left-px w-3 h-3 border-b border-l border-brand" />
@@ -133,7 +138,7 @@ export function Hero() {
               </div>
             </div>
 
-            <div>
+            <div className="hidden lg:block">
               <p className="font-heading text-[10px] tracking-[0.3em] text-subtle mb-2">
                 THREE VERTICALS
               </p>
@@ -168,6 +173,61 @@ export function Hero() {
         <ScrollIndicator />
       </div>
     </section>
+  );
+}
+
+function DeadlineFeatureCard() {
+  return (
+    <Link
+      href={DEADLINE_ARTICLE_URL}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Read the Deadline exclusive on Esha Bargate Productions (opens in a new tab)"
+      className="group relative block"
+    >
+      {/* Brand glow behind the card, lifts on hover */}
+      <span
+        aria-hidden
+        className="pointer-events-none absolute -inset-4 bg-brand/25 rounded-full blur-3xl opacity-60 group-hover:opacity-100 transition-opacity duration-500"
+      />
+
+      <span className="relative block border border-border group-hover:border-brand bg-surface/40 backdrop-blur-sm p-2 transition-colors duration-500">
+        <span className="pointer-events-none absolute -top-px -left-px w-3 h-3 border-t border-l border-brand" />
+        <span className="pointer-events-none absolute -top-px -right-px w-3 h-3 border-t border-r border-brand" />
+        <span className="pointer-events-none absolute -bottom-px -left-px w-3 h-3 border-b border-l border-brand" />
+        <span className="pointer-events-none absolute -bottom-px -right-px w-3 h-3 border-b border-r border-brand" />
+
+        <span className="relative block overflow-hidden bg-background">
+          <Image
+            src="/images/home/hero/deadline-feature.jpeg"
+            alt="As featured in Deadline, exclusive, March 4, 2024: Actor-Producer Esha Bargate Launches Production Company To Challenge How Hollywood Sees India"
+            width={1024}
+            height={740}
+            sizes="(min-width: 1024px) 560px, 100vw"
+            loading="eager"
+            fetchPriority="high"
+            className="w-full h-auto transition-transform duration-700 group-hover:scale-[1.02]"
+          />
+          {/* Light sweep across the artwork on hover */}
+          <span
+            aria-hidden
+            className="pointer-events-none absolute inset-y-0 -left-1/2 w-1/3 -skew-x-12 bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-1000 ease-out group-hover:translate-x-[500%]"
+          />
+        </span>
+
+        <span className="flex items-center justify-between gap-3 px-1.5 pt-3 pb-1">
+          <span className="font-heading text-[10px] tracking-[0.3em] text-brand">
+            IN THE PRESS &middot; DEADLINE EXCLUSIVE
+          </span>
+          <span className="inline-flex items-center gap-2 font-heading text-[10px] tracking-[0.2em] text-muted group-hover:text-foreground transition shrink-0">
+            READ THE STORY
+            <span className="transition-transform group-hover:translate-x-1">
+              <Arrow />
+            </span>
+          </span>
+        </span>
+      </span>
+    </Link>
   );
 }
 
